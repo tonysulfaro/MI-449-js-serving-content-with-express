@@ -7,11 +7,9 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node test.js",
-    "dev:server": "live-server",
+    "start": "node server.js",
     "dev:sass": "node-sass source/scss/style.scss --watch --output=compiled/css --output-style=compressed --source-map=true",
-    "dev": "run-p dev:*",
+    "dev": "run-p dev:* start",
     "build:htmlhint": "htmlhint *.html",
     "build:stylelint": "stylelint \"source/scss/*.scss\"",
     "build:standard": "standard \"*.js\"",
