@@ -16,7 +16,9 @@
     "build:stylelint": "stylelint \"source/scss/*.scss\"",
     "build:standard": "standard \"*.js\"",
     "build:sass": "node-sass source/scss/style.scss --output=public/stylesheets/ --output-style=compressed --source-map=true",
-    "build": "run-s build:*"
+    "build": "run-s build:*",
+    "deploy:heroku": "git push heroku master",
+    "deploy": "run-s build:* deploy:heroku"
   },
   "dependencies": {
     "ejs": "^2.5.6",
