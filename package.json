@@ -15,7 +15,7 @@
     "build:htmlhint": "htmlhint *.html",
     "build:stylelint": "stylelint \"source/scss/*.scss\"",
     "build:standard": "standard \"*.js\"",
-    "build:sass": "node-sass source/scss/main.scss --output=public/stylesheets/ --output-style=compressed --source-map=true",
+    "build:sass": "node-sass source/scss/style.scss --output=public/stylesheets/ --output-style=compressed --source-map=true",
     "build": "run-s build:*"
   },
   "dependencies": {
