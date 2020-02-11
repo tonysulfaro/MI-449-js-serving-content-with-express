@@ -2,7 +2,6 @@ var express = require('express')
 var app = express()
 var port = process.env.PORT || 8080
 const path = require('path')
-const PORT = process.env.PORT || 5000
 
 var shows = {}
 
@@ -52,5 +51,5 @@ for (const id in shows) {
   app.get(shows[id].route, (req, res) => res.render('pages/show', { shows: shows, show: shows[id] }))
 }
 
-app.listen(PORT)
-console.log(`listening on port: ${PORT}`)
+app.listen(port)
+console.log(`listening on port: ${port}`)
