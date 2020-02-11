@@ -4,8 +4,8 @@
   </div>
   <div class="nav">
     <p><a href="/">Home</a></p>
-    <p><a href="/hasbin-hotel">Hasbin Hotel</a></p>
-    <p><a href="/rick-and-morty">Rick and Morty</a></p>
-    <p><a href="/aggretsuko">Aggretsuko</a></p>
+    <% Object.keys(shows).forEach(function (id) { %>
+    <p><a href="<%= shows[id].route %>"><%= shows[id].name %></a></p>
+    <% }) %>
   </div>
 </nav>
