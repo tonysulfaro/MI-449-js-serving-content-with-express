@@ -1,4 +1,6 @@
-const express = require('express')
+var express = require('express')
+var app = express()
+var port = process.env.PORT || 8080
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
@@ -40,12 +42,15 @@ createShow({
   route: '/aggretsuko'
 })
 
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index', { shows: shows }))
-  .get('/hasbin-hotel', (req, res) => res.render('pages/show', { shows: shows, show: shows[0] }))
-  .get('/rick-and-morty', (req, res) => res.render('pages/show', { shows: shows, show: shows[1] }))
-  .get('/aggretsuko', (req, res) => res.render('pages/show', { shows: shows, show: shows[2] }))
-  .listen(PORT, () => console.log(`Listening on ${PORT}`))
+app.use(express.static(path.join(__dirname, 'public')))
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
+app.get('/', (req, res) => res.render('pages/index', { shows: shows }))
+
+// generate paths for each show
+for (const id in shows) {
+  app.get(shows[id].route, (req, res) => res.render('pages/show', { shows: shows, show: shows[id] }))
+}
+
+app.listen(PORT)
+console.log(`listening on port: ${PORT}`)
