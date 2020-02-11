@@ -9,6 +9,23 @@
 
   <div class="header-image"></div>
 
+  <div class="container">
+
+    <% Object.keys(shows).forEach(function (id) { %>
+    <div class="row">
+      <div class=" col-50">
+        <h2><%= shows[id].name %></h2>
+        <p>Air Date: <%= shows[id].airdate %></p>
+        <p><%= shows[id].about %></p>
+      </div>
+      <div class="col-50 img-aside">
+        <img src="<% shows[id].imgurl%>" alt="">
+      </div>
+    </div>
+    <% }) %>
+
+  </div>
+
   <script src="/js/script.js"></script>
 
 </body>
