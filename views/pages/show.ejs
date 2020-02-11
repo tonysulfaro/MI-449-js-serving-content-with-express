@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include ../partials/head %>
+
+<body>
+
+  <% include ../partials/nav %>
+
+  <div class="img-gradient"></div>
+  <div class="img-show">
+    <img src="<%= shows.imgurl %>">
+  </div>
+
+  <div class="container">
+    <h2><%= shows.name %></h2>
+    <p>Air Date: <%= shows.airdate %></p>
+    <p><strong>About: </strong></p>
+    <p><%= shows.about %></p>
+
+    <p><strong>What I like About it:</strong></p>
+    <p>The animation itself is top-notch.</p>
+    <p><strong>Things that could be Improved</strong></p>
+    <p>he storyline itself is a bit much to follow and they introduce too many
+      characters for a pilot episode but I found it humerous and ejoyable nonetheless</p>
+
+  </div>
+
+  <script src="/js/script.js"></script>
+
+</body>
+
+</html>
