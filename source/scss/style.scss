@@ -17,6 +17,7 @@ nav {
   align-items: center;
   position: fixed;
   width: 100%;
+  z-index: 3;
 
   & .nav-logo {
     & p {
@@ -60,11 +61,21 @@ nav {
   height: 50%;
 }
 
+.img-gradient {
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  background: linear-gradient(rgba(0, 0, 0, 0.575), rgba(0, 0, 0, 0));
+}
+
 .img-show {
   height: 50%;
   overflow: hidden;
   object-fit: cover;
   background-size: cover;
+  position: relative;
+  z-index: 1;
 
   & img {
     width: 100%;
