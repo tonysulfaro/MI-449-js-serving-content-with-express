@@ -26,7 +26,7 @@ createShow({
   airdate: 'December 2, 2013',
   like: 'The animation itself is top-notch. Each episode as well is stand alone for the mostpart.',
   dislike: 'They need to release episodes more often so I can watch them.',
-  imgurl: '/images/rick-morty.jpeg',
+  imgurl: '/images/rick-morty.jpg',
   route: '/rick-and-morty'
 })
 
