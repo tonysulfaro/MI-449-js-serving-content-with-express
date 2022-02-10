@@ -25,7 +25,7 @@
   "devDependencies": {
     "htmlhint": "^0.11.0",
     "live-server": "^1.2.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "npm-run-all": "^4.1.5",
     "request": "^2.81.0",
     "standard": "^14.3.1",
